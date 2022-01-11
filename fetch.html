@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript">
+  	function retrieveData(){
+  		fetch("https://reqres.in/api/users?page=1")
+	      .then(function(resp){
+	        return resp.json();
+	      })
+	      .then(function(b){
+	      	s(b.data);
+	      })
+  	}
+    function s(info){
+    	console.log("data from function",info)
+    	for(i=0;i<info.length;i++){
+    		console.log(info[i].first_name)
+    		/*var p=document.getElementById("name");
+   			p.innerHTML=p.innerHTML+"<br/>"+info[i].first_name*/
+   			document.getElementById("name").innerHTML+=info[i].first_name
+   			document.getElementById("em").innerHTML+=info[i].email
+   			document.getElementById("image").innerHTML+=`<img src="${info[i].avatar}"/>`
+   		}
+    }
+  </script>
+</head>
+<body>
+	<h3>Names </h3>
+	<p id="name"></p>
+	<p id="em"></p>
+	<p id="image"></p>
+	<button onclick="retrieveData()"> submit</button>
+</body>
+</html>

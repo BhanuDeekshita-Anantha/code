@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript">
+			function validate(){
+				var firstname=document.getElementById("fname").value;
+				var mobile=document.getElementById("mobile").value;
+				var email=document.getElementById("email").value;
+				//console.log("fname",firstname);
+				var check=/^[a-zA-Z0-9]+$/;
+				var cmobile=/^[0-9]{10}$/;
+				var checkmail=/^[a-z0-9.]+@[a-z]+\.[a-z]{2,3}$/;
+                       //bhanu				
+				//console.log(firstname.match(check));
+				if(firstname==""){
+					alert("please check your name")
+					return false;
+				}
+				if(!firstname.match(check)){
+						alert("name must be in lower cases")
+						return false;
+				}
+				if(mobile==""){
+					alert("Please enter mobile");
+					return false;
+				}
+				if(!mobile.match(cmobile)){
+					alert("check the count");
+					return false;
+				}
+				if(email==""){
+					alert("Please enter correct email");
+					return false;
+				}
+				if(!email.match(checkmail)){
+					alert("enter correct mail address");
+					return false;
+				}
+				/*if(firstname.length<3){
+					alert("name must have 3 characters")
+					return false;
+				}*/
+				   /*if(firstname==""){
+					alert("please check your name")
+					return false;*/
+					
+			    return true;
+			 }   
+		</script>	
+	</head>
+	<body>
+		<form action="https://www.snapchat.com" onsubmit="return validate()">
+			<p><input
+			       id="fname"
+			       type="text"
+			       placeholder="enter a name"/>
+            </p>
+            <p>
+            	<input
+            	    id="mobile"
+                    type="text" 
+                    placeholder="enter mobile number"/>
+            </p>
+            <p>
+            	<input 
+                     id="email"
+            	     type="text"
+            	     placeholder="enter email"/>
+            </p>
+			 <button>submit</button>
+			 <input type="reset" value="clear"/>
+		</form>
+	</body>
+</html>

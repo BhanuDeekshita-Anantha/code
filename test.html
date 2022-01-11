@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*var list=[
+		{
+           name:"siri",
+           email:"siri@gmail.com",
+           salary:25000
+		},
+		{
+           name:"minnu",
+           email:"minnu@gmail.com",
+           salary:15000
+		},
+		{
+           name:"bannu",
+           email:"bannu@gmail.com",
+           salary:45000
+		}
+		]*/
+		//for(var i=0;i<list.length;i++)
+			//console.log(list[i].name,list[i].email);
+			//list.map((b)=>console.log(b.name,b.email));
+			//var newArr=list.filter((b)=>b.salary>20000)
+			//console.log(newArr);
+
+			//list.filter((n)=>n.salary>20000).map(p=>console.log(p.salary))
+
+       function Data(){
+           fetch("https://reqres.in/api/users?page=2")
+           .then(function(user){
+	        return user.json();
+	      })
+	      .then(function(m){
+	      	b(m.data);
+	      })
+       } 
+       function b(value){
+       	 console.log("value of function",value);
+       	 
+       }   
+	</script>
+       
+</head>
+<body>
+    <h2>Names </h2>
+	<p id="name"></p>
+	<p id="image"></p>
+	<button onclick="Data()"> submit</button>
+</body>
+</html>

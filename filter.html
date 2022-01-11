@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var ages=[20,24,28,18,35,47,68]
+		var newArr=[];
+		//without using filters
+		 for(var i=0;i<ages.length;i++){
+		 	if(ages[i]>21)
+		 		newArr.push(ages[i]);  //we can use slice,shift and unshift
+		 }
+		 console.log(newArr)
+
+		 //using filters
+		 var newArr=ages.filter((b)=> b>18);
+		   console.log(newArr)
+
+		   let js=["Sun","Moon","Stars","Earth","galaxy","Space station"];
+		   console.log("before",js)
+		   js=js.filter((z)=> z!="Earth")
+		   console.log("after",js)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

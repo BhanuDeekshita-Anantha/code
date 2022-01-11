@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		onload=function(){
+			var s=document.getElementsByClassName("para");
+		    console.log(s[0].innerHTML);
+		}
+		function demo(){
+			var d="hello iam killer"
+			document.getElementById("para").innerHTML=d;
+		}
+	</script>
+</head>
+<body>
+	<p class="para">This is text</p>
+	<h1 class="para">this is heading</h1>
+	<p id="para">another element</p>
+	<button onclick="demo()">sunmit</button>
+</body>
+</html>
